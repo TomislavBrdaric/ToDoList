@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(22, 22, 21),
+    rgb(16, 163, 73),
+    rgb(22, 22, 21)
+  );
+  font-family: "Poppins", sans-serif;
+  font-family: "Press Start 2P", cursive;
+  min-height: 100vh;
+}
+
+header,
+form {
+  min-height: 8vh;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+form button {
+  cursor: pointer;
+  transform: all 0.3s ease;
+  background: white;
+  color: rgb(241, 101, 20);
+}
+
+form button:hover {
+  background: rgb(241, 101, 20);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.todo-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  margin-top: 100px;
+  min-width: 30%;
+  list-style: none;
+  font-family: "Anton", sans-serif;
+  font-family: "Titillium Web", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.delete-btn,
+.complete-btn {
+  background: rgb(241, 101, 20);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: rgb(14, 138, 61);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash-alt,
+.fa-solid {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: rgb(241, 101, 20);
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: rgb(241, 101, 20);
+  top: 0;
+  right: 0;
+  padding: 0.6rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: rgb(241, 101, 20);
+}
